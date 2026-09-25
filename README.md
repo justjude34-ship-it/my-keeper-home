@@ -1,19 +1,19 @@
 # My Keeper
 
-Quiet companion PWA. One thing at a time, a voice to talk to, a memory that keeps the words.
+Quiet companion PWA.
 
-Live: https://my-keeper-home.netlify.app/
+Live Netlify: https://my-keeper-home.netlify.app/
 
-## Look
+## Why there is no hero image on the live site
 
-- Hero: silk wave wallpaper (`hero.jpg`) as a Today banner and a full-page atmospheric background with a dark veil so cards stay readable.
-- Headings: metallic gold gradient `#f6e7a1 → #e0b84a → #f3d67a` on the brand, Today / Amy / Pets / Kept / Notes, and Settings.
+The live Netlify deploy is the **old one-file app**. It never received `hero.jpg`.
+`https://my-keeper-home.netlify.app/hero.jpg` is a 404.
 
-## Deploy to the existing Netlify site
+If `index.html` is dropped **without** `hero.jpg` beside it, the silk banner stays blank.
 
-Netlify is not connected here. To update https://my-keeper-home.netlify.app/:
+## Fix (one file, cannot miss the picture)
 
-1. Open the site in Netlify → Deploys → Deploy manually
-2. Drop `index.html` and `hero.jpg` together
+Use the single `index.html` that has the silk image **embedded inside it** (data URI).
+Drop **only that file** on Netlify → Deploys → Deploy manually.
 
-Or connect this GitHub repo to that Netlify site and push.
+Headings use metallic gold `#f6e7a1 → #e0b84a → #f3d67a`.
